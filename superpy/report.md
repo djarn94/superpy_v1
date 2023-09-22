@@ -44,7 +44,8 @@ Function 7. is the backbone function of the app:
     def export_unsold(): 
     The export of unsold products is a handy side file to check what is not yet sold. And if desired this export can also be made of expired products! (not yet programmed into the CLI app.)
 
-8. has two important functions:
+
+8. profit has two important functions:
     1. will show you the expenses,revenue and profit of a desired date range.
     def profit(start_date, end_date):
     2. shows a line graph which shows the profit or losses you have per month over the selected year.
