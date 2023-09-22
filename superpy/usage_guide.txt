@@ -1,0 +1,80 @@
+Welcome to the usage guide of superpy digital supermarket, inventory register and multi functional tracker.
+
+This CLi app has alot of functions to make your job easier.
+IMPORTANT! : Before you use the app please read 7.time travel(set_date). Which influences everything you do and if not set corrected can interrupt your desired outputs.
+For function 8. you probably need to install module : matplotlib.pyplot & numpy
+
+0.how to run the app.
+1.Register all bought products
+2.Register all sold products
+3.Keep track of current available inventory.
+4.Show all bought products and if they are expired or sold.
+5.Show all sold products.
+6.Export bought or sold list.
+7.time travel(set_date) to give you more options when to register bought or sold products and see certain reports of different time stamps.
+8.Show Revenue, losses or profit made in certain date ranges or a graphical overview for selected year.
+
+0.How to run the app
+Run your CLI like Windows powershell.
+use cd (folder name of where the app is saved)
+use py .\super.py -h to see a list of commands and help.
+
+1.Register bought products
+To register bought products use : 
+py .\super.py bought 'product_name' 'buy_price' 'expiration_date'(YYYY-MM-DD)
+as example : py .\super.py bought orange 0.35 2023-10-10
+for more help use 'py .\super.py bought -h' in your CLI.
+Note : register date is linked to 7.set_date
+
+2.Register all sold products
+To register sold products use:
+py .\super.py sold 'bought id' 'sell price'
+as example : py .\super.py sold 1 1.25
+for more help use 'py .\super.py sold -h' in your CLI
+Note : register date is linked to 7.set_date
+
+3.show current inventory of todays date
+use py .\super.py inventory -now now
+for more help use py .\super.py inventory -h.
+This also shows what the supermarket currently has to offer.
+
+4.show all bought products and if they are expired or sold to todays date(see 7.set_date).
+use py .\super.py inventory -bought bought
+for more help use py .\super.py inventory -h.
+
+5.show all sold products totodays date(see 7.set_date).
+use py .\super.py inventory -sold sold
+for more help use py .\super.py inventory -h.
+
+6.export bought or sold as csv file to todays date(see 7.set_date).
+for bought csv export use py .\super.py export -bought bought
+for sold csv export use py .\super.py export -sold sold
+also you can make a export for unsold products.
+for this use py .\super.py export -unsold unsold
+all exports will be saved in a folder called exports which will be created on your first export in the CLI apps folder.
+And in that folder for every kind of export bought,sold and unsold will have his own folder.
+for more help use py .\super.py export -h.
+
+7.Time travel (set_date)
+Perhaps the most important function of your cli app since this has big impact on almost everything you do in the superpy app.
+how to use : py .\super.py set_date today to set the apps date to today's current date.
+or select your own date by using py .\super.py set_date YYYY-MM-DD
+
+as example : py .\super.py set_date 2023-10-10 to set your date to 10 Oktober 2023.
+recommended is before you start using the app to always use py .\super.py set_date today. Or ofcourse any desired date.
+The date will show almost with every action you do inside the ClI. to remind you on what date your registering and showing reports.
+for more help use py .\super.py set_date -h.
+
+8.Show Revenue, losses or profit made in certain date ranges or a graphical overview for selected year.
+use py .\super.py profit start_date(YYYY-MM-DD) end_date(YYYY-MM-DD)
+as example py .\super.py profit 2023-01-01 2023-12-31
+This will show expenses, revenue and profit from 01 January 2023 to 31 December 2023.
+for more help use py .\super.py profit -h.
+
+To see a yearly financial overview you can use:
+py .\super.py graph YYYY
+as example : py .\super.py graph 2023 to see the a financial graph of that year.
+for more help use py .\super.py graph -h.
+
+
+
