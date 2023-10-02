@@ -73,7 +73,7 @@ for more help use py .\super.py profit -h.
 
 To see a yearly financial overview you can use:
 py .\super.py graph YYYY
-as example : py .\super.py graph 2023 to see the a financial graph of that year.
+as example : py .\super.py graph 2023 to see a financial graph of that year.
 for more help use py .\super.py graph -h.
 
 
